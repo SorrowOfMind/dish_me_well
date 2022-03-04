@@ -1,0 +1,32 @@
+.notif-wrapper {
+    background-color: $wrap-bg;
+    padding: 3rem 4rem;
+    position: relative;
+    top: 3rem;
+    max-width: 500px;
+    min-width: 340px;
+    width: 45%;
+    margin: 0 auto;
+    color: #fff;
+    @include fluid-font(18px, 26px);
+    text-align: center;
+    .success {
+        color: $main-green;
+    }
+    .error {
+        color: $error-color;
+    }
+    .notif-btn {
+        background-color: $main-green;
+        display: block;
+        color: #fff;
+        width: 100%;
+        padding: 1rem 0;
+        margin-top: 2rem;
+        transition: background .2s linear;
+        @include fluid-font(13px, 16px);
+        &:hover {
+            background-color: $secondary-green;
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import history from '../../history';
 
 import { FORM_RESPONSE } from './types';
 
@@ -31,6 +32,7 @@ export const createDish = (values, prepTime) => {
         try {
             let {data} = await axios.post(URL, requestObj, axiosConfig);
             dispatch({type: FORM_RESPONSE, payload: data});
+            history.push('/notification');
         } catch (err) {
             throw new Error('Ooops... something went wrong');
         }
