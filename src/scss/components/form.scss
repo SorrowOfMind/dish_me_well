@@ -28,6 +28,7 @@
         .inner-field-wrapper {
             position: relative;
             padding: 2.2rem 0;
+            width: 40%;
         }
     }
     .label, .input {
@@ -59,7 +60,7 @@
         right: 0;
         bottom: 0;
         color: $error-color;
-        font-size: 1.2rem;
+        @include fluid-font(10px, 12px);
     }
 
     .prep-time-wrapper {

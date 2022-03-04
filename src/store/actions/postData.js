@@ -1,7 +1,7 @@
 import axios from 'axios';
 import history from '../../history';
 
-import { FORM_RESPONSE } from './types';
+import {FORM_RESPONSE, FORM_ERROR} from './types';
 
 const URL = "https://frosty-wood-6558.getsandbox.com:443/dishes";
 
@@ -34,7 +34,8 @@ export const createDish = (values, prepTime) => {
             dispatch({type: FORM_RESPONSE, payload: data});
             history.push('/notification');
         } catch (err) {
-            throw new Error('Ooops... something went wrong');
+            dispatch({type: FORM_ERROR, payload: err.response.data});
+            history.push('/notification');
         }
     }
 }
