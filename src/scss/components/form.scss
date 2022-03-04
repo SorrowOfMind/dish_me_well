@@ -1,0 +1,85 @@
+.form-wrapper {
+    background-color: $wrap-bg;
+    position: relative;
+    top: 3rem;
+    max-width: 500px;
+    min-width: 340px;
+    width: 45%;
+    margin: 0 auto;
+    color: #fff;
+    padding: 3rem 4rem;
+    .form-title {
+        color: $main-green;
+        @include fluid-font(20px, 30px);
+        font-weight: bold;
+        text-align: center;
+        line-height: 100%;
+    }
+    .field-wrapper {
+        padding: 2.2rem 0;
+        position: relative;
+    }
+    .select-wrapper {
+        padding-top: 0;
+    }
+    .field-wrapper-inline {
+        @include flexbox(row, space-between, stretch);
+        padding: 0;
+        .inner-field-wrapper {
+            position: relative;
+            padding: 2.2rem 0;
+        }
+    }
+    .label, .input {
+        display: block;
+        @include fluid-font(13px, 16px);
+    }
+    .label {
+        color: $main-green;
+    }
+    .input, .select-input {
+        border-bottom: 2px solid #fff;
+        color: #fff;
+        width: 100%;
+        padding: 0.7rem 0;
+        font-size: 1.4rem;
+        transition: border .2s;
+    }
+    .input:focus {
+        border-bottom: 2px solid $main-green;
+    }
+    .select-input {
+        option {
+            color:black;
+        }
+    }
+
+    .error {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        color: $error-color;
+        font-size: 1.2rem;
+    }
+
+    .prep-time-wrapper {
+        @include flexbox(row, space-between, center);
+        .prep-time-inner-wrapper {
+            width: 25%;
+            position: relative;
+            padding: 2.2rem 0;
+        }
+    }
+
+    .form-btn {
+        background-color: $main-green;
+        color: #fff;
+        width: 100%;
+        padding: 1rem 0;
+        margin-top: 2rem;
+        transition: background .2s linear;
+        &:hover {
+            background-color: $secondary-green;
+        }
+    }
+}
