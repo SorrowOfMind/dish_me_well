@@ -9,8 +9,9 @@ import store from './store/store';
 import App from './App';
 
 ReactDOM.render(
-    <Provider store={store}>
-        <Router history={history}>
-            <App />
-        </Router>
-    </Provider>, document.getElementById('root'));
+  <Provider store={store}>
+    <Router history={history}>
+      <App />
+    </Router>
+  </Provider>, 
+	document.getElementById('root'));

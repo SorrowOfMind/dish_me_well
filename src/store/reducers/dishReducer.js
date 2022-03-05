@@ -1,6 +1,5 @@
 import { FORM_RESPONSE, FORM_ERROR } from "../actions/types";
 
-
 const dishReducer = (state = {}, action) => {
     switch (action.type){
         case FORM_RESPONSE:

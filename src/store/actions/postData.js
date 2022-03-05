@@ -13,7 +13,6 @@ let axiosConfig = {
 };
 
 export const createDish = (values, prepTime) => {
-
     let requestObj = {
         "name": values.name,
         "preparation_time": prepTime,
